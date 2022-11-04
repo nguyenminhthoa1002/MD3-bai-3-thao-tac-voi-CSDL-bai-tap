@@ -16,7 +16,7 @@ from md3_bai2_baitap.customer cus join md3_bai2_baitap.orders ord on cus.cID = o
 
 -- Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào 
 select cus1.cID, cus1.cName
-from md3_bai2_baitap.customer cus1 join md3_bai2_baitap.orders ord1 on cus1.cID = ord1.cID join md3_bai2_baitap.orderdetail orde1 on ord1.oID = orde1.oID join md3_bai2_baitap.product pro1 on orde1.pID = pro1.pID
+from md3_bai2_baitap.customer cus1 
 where cus1.cID not in
 (
 select cus.cID
